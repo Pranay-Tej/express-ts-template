@@ -2,12 +2,15 @@ import express from 'express';
 import path from 'path';
 import dotenv from 'dotenv'
 import mongoose from 'mongoose';
-
+import cors from 'cors';
 // ENV CONFIG
 dotenv.config();
 
 // Express
 const app = express();
+
+// CORS
+app.use(cors())
 
 
 // Routes
