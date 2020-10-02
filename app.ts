@@ -3,6 +3,8 @@ import path from 'path';
 import dotenv from 'dotenv'
 import mongoose from 'mongoose';
 import cors from 'cors';
+import articleRoutes from './routes/articles';
+
 // ENV CONFIG
 dotenv.config();
 
@@ -10,11 +12,10 @@ dotenv.config();
 const app = express();
 
 // CORS
-app.use(cors())
+app.use(cors());
 
 
 // Routes
-import articleRoutes from './routes/articles'
 
 // Middleware
 app.use(express.json());
